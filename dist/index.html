@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="bundle.js" defer></script>
+
     <title>Form Validation TheOdinProject</title>
+
 </head>
 <body>
     
+    <div class="content">
+
+        <form novalidate>
+
+            <h1>The Basic Form</h1>
+
+            <input type="email" name="email" id="email" placeholder="Email" minlength="6" required>
+            <span class="error-email" aria-live="polite"></span>
+
+            <input type="text" name="country" id="country" placeholder="Country" minlength="2" required>
+            <span class="error-country" aria-live="polite"></span>
+
+            <input type="number" id="zip-code" placeholder="Zip Code" pattern="[0-9]{5}" required>
+            <span class="error-zip" aria-live="polite"></span>
+
+            <input type="password" name="password" id="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+            <span class="error-pass" aria-live="polite"></span>
+
+            <input type="password" name="password-two" id="password-two" placeholder="Confirm Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
+            <span class="error-passtwo" aria-live="polite"></span>
+
+            <button type="submit" id="form-submit">Submit</button>
+
+        </form>
+
+    </div>
+
 </body>
 
 </html>

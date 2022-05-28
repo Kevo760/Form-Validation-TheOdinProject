@@ -1,1 +1,3 @@
-import './style.css';
+import { generateWebsite } from './generateWebsite';
+
+generateWebsite();
